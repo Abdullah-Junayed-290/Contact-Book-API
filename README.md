@@ -1,108 +1,104 @@
-📇 Contact Book API
+# ðŸ“‡ Contact Book API
 
 A RESTful API built with Django and Django REST Framework to manage personal contacts. This API allows users to create, retrieve, update, and delete contact information efficiently.
 
-🚀 Features
+## ðŸš€ Features
 
-CRUD Operations: Create, Read, Update, and Delete contacts.
+- **CRUD Operations**: Create, Read, Update, and Delete contacts.
+- **RESTful Endpoints**: Follows REST principles for API design.
+- **SQLite Database**: Lightweight and easy-to-use database for development.
+- **Modular Structure**: Organized codebase for scalability and maintenance.
 
-RESTful Endpoints: Follows REST principles for API design.
+## ðŸ› ï¸ Technologies Used
 
-SQLite Database: Lightweight and easy-to-use database for development.
+- **Backend Framework**: [Django](https://www.djangoproject.com/)
+- **API Framework**: [Django REST Framework](https://www.django-rest-framework.org/)
+- **Database**: SQLite (default for Django projects)
 
-Modular Structure: Organized codebase for scalability and maintenance.
+## ðŸ“‚ Project Structure
 
-
-🛠️ Technologies Used
-
-Backend Framework: Django
-
-API Framework: Django REST Framework
-
-Database: SQLite (default for Django projects)
-
-
-📂 Project Structure
-
+```
 Contact-Book-API/
-├── api/
-│   ├── migrations/
-│   ├── __init__.py
-│   ├── admin.py
-│   ├── apps.py
-│   ├── models.py
-│   ├── serializers.py
-│   ├── tests.py
-│   └── views.py
-├── contact_book/
-│   ├── __init__.py
-│   ├── asgi.py
-│   ├── settings.py
-│   ├── urls.py
-│   └── wsgi.py
-├── db.sqlite3
-└── manage.py
+â”œâ”€â”€ api/
+â”‚   â”œâ”€â”€ migrations/
+â”‚   â”œâ”€â”€ __init__.py
+â”‚   â”œâ”€â”€ admin.py
+â”‚   â”œâ”€â”€ apps.py
+â”‚   â”œâ”€â”€ models.py
+â”‚   â”œâ”€â”€ serializers.py
+â”‚   â”œâ”€â”€ tests.py
+â”‚   â””â”€â”€ views.py
+â”œâ”€â”€ contact_book/
+â”‚   â”œâ”€â”€ __init__.py
+â”‚   â”œâ”€â”€ asgi.py
+â”‚   â”œâ”€â”€ settings.py
+â”‚   â”œâ”€â”€ urls.py
+â”‚   â””â”€â”€ wsgi.py
+â”œâ”€â”€ db.sqlite3
+â””â”€â”€ manage.py
+```
 
-⚙️ Installation & Setup
+## âš™ï¸ Installation & Setup
 
-1. Clone the Repository:
+1. **Clone the Repository**:
 
-git clone https://github.com/Abdullah-Junayed-290/Contact-Book-API.git
-cd Contact-Book-API
+   ```bash
+   git clone https://github.com/Abdullah-Junayed-290/Contact-Book-API.git
+   cd Contact-Book-API
+   ```
 
+2. **Create a Virtual Environment**:
 
-2. Create a Virtual Environment:
+   ```bash
+   python -m venv env
+   source env/bin/activate  # On Windows: env\Scripts\activate
+   ```
 
-python -m venv env
-source env/bin/activate  # On Windows: env\Scripts\activate
+3. **Install Dependencies**:
 
+   ```bash
+   pip install -r requirements.txt
+   ```
 
-3. Install Dependencies:
+4. **Apply Migrations**:
 
-pip install -r requirements.txt
+   ```bash
+   python manage.py migrate
+   ```
 
+5. **Run the Development Server**:
 
-4. Apply Migrations:
+   ```bash
+   python manage.py runserver
+   ```
 
-python manage.py migrate
+   The API will be accessible at `http://127.0.0.1:8000/`.
 
+## ðŸ“¬ API Endpoints
 
-5. Run the Development Server:
+| Method | Endpoint             | Description               |
+|--------|----------------------|---------------------------|
+| GET    | `/api/contacts/`     | Retrieve all contacts     |
+| POST   | `/api/contacts/`     | Create a new contact      |
+| GET    | `/api/contacts/{id}/`| Retrieve a specific contact |
+| PUT    | `/api/contacts/{id}/`| Update a specific contact |
+| DELETE | `/api/contacts/{id}/`| Delete a specific contact |
 
-python manage.py runserver
+> Replace `{id}` with the contact's unique identifier.
 
-The API will be accessible at http://127.0.0.1:8000/.
-
-
-
-📬 API Endpoints
-
-Method	Endpoint	Description
-
-GET	/api/contacts/	Retrieve all contacts
-POST	/api/contacts/	Create a new contact
-GET	/api/contacts/{id}/	Retrieve a specific contact
-PUT	/api/contacts/{id}/	Update a specific contact
-DELETE	/api/contacts/{id}/	Delete a specific contact
-
-
-> Replace {id} with the contact's unique identifier.
-
-
-
-🧪 Running Tests
+## ðŸ§ª Running Tests
 
 To run the test suite:
 
+```bash
 python manage.py test
+```
 
-📝 License
+## ðŸ“ License
 
-This project is licensed under the MIT License.
+This project is licensed under the [MIT License](LICENSE).
 
-🙋‍♂️ Author
+## ðŸ™‹â€â™‚ï¸ Author
 
-Md. Abdullah Junayed
-GitHub Profile
-
-
+- **Md. Abdullah Junayed**  
+  [GitHub Profile](https://github.com/Abdullah-Junayed-290)
